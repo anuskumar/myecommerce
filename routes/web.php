@@ -11,5 +11,13 @@
 |
 */
 
-Route::get('/','HomeController@index');
-Route::get('/single_product','HomeController@single');
+Route::get('/','HomeController@index')->name('home');
+Route::get('/products/{slug}','HomeController@showProduct')->name('product.show');
+
+Route::get('/category/{slug}','HomeController@showCategoryListing')->name('category.list');
+
+
+Route::get('/cart','CartController@showCart')->name('cart');
+Route::get('/checkout','CartController@showCheckout')->name('checkout');
+
+

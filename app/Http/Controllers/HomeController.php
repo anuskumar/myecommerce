@@ -11,9 +11,21 @@ class HomeController extends Controller
 
         return view('front-end.home');
     }
-    public function single(){
+    public function showProduct($slug){
 
-        return view('front-end.single');
+        $data = [];
+        $data['slug'] = $slug;
+
+        return view('front-end.single',$data);
+    }
+
+    public function showCategoryListing($slug){
+
+        $data = [];
+
+        return view('front-end.category ', $data);
+
+
     }
 
 
