@@ -6,15 +6,11 @@ use Carbon\Carbon;
 
 class ProductTableSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+
     public function run()
     {
        // $products= ['Hotel Management','School Management'];
-        for ($i=1; $i <= 19 ; $i++){
+        for ($i=1; $i <= 100 ; $i++){
             Product::create([
                 'category_id' => rand(1,5),
                 'name' => 'Product' .$i,
@@ -22,8 +18,8 @@ class ProductTableSeeder extends Seeder
                 'description' => str_random(120),
                 'quantity' => rand(1,10),
                 'price' => rand(100,5000),
-                 'created_at' => Carbon::now(),
-                 'updated_at' => Carbon::now(),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
                 ]);
         }
     }
