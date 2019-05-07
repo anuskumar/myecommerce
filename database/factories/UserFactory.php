@@ -4,6 +4,8 @@
 use App\User;
 use Illuminate\Support\Str;
 use Faker\Generator as Faker;
+use App\Category;
+use App\Product;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +17,6 @@ use Faker\Generator as Faker;
 | model instances for testing / seeding your application's database.
 |
 */
-
 $factory->define(User::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
@@ -25,3 +26,23 @@ $factory->define(User::class, function (Faker $faker) {
         'remember_token' => Str::random(10),
     ];
 });
+
+// $factory->define(Category::class, function (Faker $faker) {
+//     return [
+
+//         'name' => $faker->name,
+//         'slug' => str_random(5),
+//         'active' => 1,
+//     ];
+// });
+// $factory->define(Product::class, function (Faker $faker) {
+//     return [
+
+//         'name' => $faker->name,
+//         'category_id' => rand(1,5),
+//         'slug' => str_slug(15),
+//         'quantity' => rand(1,10),
+//         'description' => str_random(120),
+//         'price' => rand(100,5000),
+//     ];
+// });
