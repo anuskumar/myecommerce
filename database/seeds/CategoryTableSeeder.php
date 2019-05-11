@@ -12,9 +12,8 @@ class CategoryTableSeeder extends Seeder
      */
     public function run()
     {
-        //
-        $categories = ['Laravel Developer','Web Developer','E-Commerce Developer'];
 
+        $categories = ['Laravel Developer','Web Developer','E-Commerce Developer'];
 
         foreach($categories as $category){
             Category::create([
