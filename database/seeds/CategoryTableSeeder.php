@@ -19,8 +19,10 @@ class CategoryTableSeeder extends Seeder
             Category::create([
                 'name' => $category,
                 'slug' => str_slug($category),
-                'description' => str_random(120),
+
                 ]);
         }
     }
 }
+
+// 'description' => str_random(120),

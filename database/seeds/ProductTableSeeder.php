@@ -12,7 +12,7 @@ class ProductTableSeeder extends Seeder
        // $products= ['Hotel Management','School Management'];
         for ($i=1; $i <= 100 ; $i++){
             Product::create([
-                'category_id' => rand(1,3),
+                'category_id' => rand(52,54),
                 'name' => 'Product' .$i,
                 'slug' => str_slug('Product' .$i),
                 'description' => str_random(120),
