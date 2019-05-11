@@ -16,7 +16,9 @@ class Controller extends BaseController
     public function __construct()
     {
         //
-        $categories  = Category::all();
+        // $categories  = Category::all();
+        $categories  = Category::select(['name', 'slug'])->get();
+
 
         view()->share('categories', $categories);
         //View::share('categories', $categories);
