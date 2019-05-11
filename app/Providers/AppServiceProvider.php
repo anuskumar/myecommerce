@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
+use App\Category;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,6 +27,5 @@ class AppServiceProvider extends ServiceProvider
     {
         // External Code
         Schema::defaultStringLength(191);
-
     }
 }
