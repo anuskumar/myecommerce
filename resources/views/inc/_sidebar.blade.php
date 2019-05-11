@@ -4,11 +4,12 @@
     <div class="list-group">
 
 
-@foreach ($categories as $category)
+     @foreach ($categories as $category)
+     <a href="{{ route('category.list', $category->slug) }}" class="list-group-item">
+       {{ $category->name }}
+    </a>
+     @endforeach
 
-@endforeach
-
-      <a href="#" class="list-group-item">Category 1</a>
 
     </div>
 
