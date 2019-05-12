@@ -12,7 +12,7 @@ $factory->define(Product::class, function (Faker $faker) {
 
     return [
 
-        'category_id' => rand(52, 114),
+        'category_id' => rand(1, 10),
         'name'        => $name,
         'slug'        => str_slug($name),
         'description' => $faker->text,
