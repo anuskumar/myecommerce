@@ -12,7 +12,7 @@
       <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
       <div class="card-body">
         <h3 class="card-title">{{ $product->name }}</h3>
-        <h6>Category:  {{ $product->category_id }}</h6>
+        <h6>Category:  {{ $product->category->name }}</h6>
         <h4>BDT {{ $product->price }}</h4>
         <p class="card-text">
         {{ $product->description }}
