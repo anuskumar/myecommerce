@@ -32,8 +32,9 @@ class HomeController extends Controller
     {
 
         $data = [];
-        $data['category'] = Category::select(['name'])->where('slug', $slug)->first();
-
+        $data['category'] = Category::select(['name','id'])->where('slug', $slug)->first();
+        $data['products'] =  $data['category']->products;
+        //$data['products'] = Product::where('category_id', $data['category']->id)->get();
         return view('front-end.category ', $data);
     }
 }

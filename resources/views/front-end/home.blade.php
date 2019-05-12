@@ -4,17 +4,10 @@
 
 @include('inc._carousel')
 
-
-
-
-
-
 <div class="row">
 
-        @foreach ($products as $product)
+    @foreach ($products as $product)
     <div class="col-lg-4 col-md-6 mb-4">
-
-
 
       <div class="card h-100">
         <a href="{{ route('product.show', $product->slug) }}">
@@ -34,8 +27,6 @@
           <a href="{{ route('cart') }}" class="btn btn-success btn-sm">Add to Cart</a>
         </div>
       </div>
-
-
     </div>
     @endforeach
   </div>

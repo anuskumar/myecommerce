@@ -3,6 +3,7 @@
   
   - Laravel Mix
   - Seeding & Factory For Bulk Product Upload without Admin Panel
+  - Laravel Debugbar
 
 ## Author Contact
 [MAHE KARIM](https://fb.com/ImMaheKarim) 

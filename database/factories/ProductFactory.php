@@ -12,7 +12,7 @@ $factory->define(Product::class, function (Faker $faker) {
 
     return [
 
-        'category_id' => rand(54, 94),
+        'category_id' => rand(52, 114),
         'name'        => $name,
         'slug'        => str_slug($name),
         'description' => $faker->text,
@@ -21,4 +21,10 @@ $factory->define(Product::class, function (Faker $faker) {
         'created_at'  => Carbon::now(),
         'updated_at'  => Carbon::now(),
     ];
+});
+
+$factory->afterCreating(Product::class, function ($product, Faker $faker){
+
+
+
 });
