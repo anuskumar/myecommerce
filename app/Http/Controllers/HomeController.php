@@ -19,8 +19,9 @@ class HomeController extends Controller
     {
 
         $data = [];
-       // $data['slug'] = $slug;
-        $data['product'] = Product::select(['category_id','name','description','price','quantity'])
+
+        $data['product'] = Product::with('category')
+        ->select(['category_id','name','description','price','quantity'])
         ->where('slug', $slug)
         ->first();
 

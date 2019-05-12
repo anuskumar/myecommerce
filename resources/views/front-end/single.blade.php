@@ -14,7 +14,7 @@
         <h3 class="card-title">{{ $product->name }}</h3>
 
         <h6>    Category:
-                <a href="{{ route('category.list' ) }}"> {{ $product->category->name }}</a>
+                <a href="{{ route('category.list' , $product->category->slug) }}"> {{ $product->category->name }}</a>
         </h6>
 
 
