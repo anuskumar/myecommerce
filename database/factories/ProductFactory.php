@@ -11,8 +11,8 @@ $factory->define(Product::class, function (Faker $faker) {
     $name =  substr($faker->text, 0, 50);
 
     return [
-        //
-        'category_id' => rand(54, 74),
+
+        'category_id' => rand(54, 94),
         'name'        => $name,
         'slug'        => str_slug($name),
         'description' => $faker->text,
