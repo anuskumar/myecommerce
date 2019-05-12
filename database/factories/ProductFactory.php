@@ -25,6 +25,8 @@ $factory->define(Product::class, function (Faker $faker) {
 
 $factory->afterCreating(Product::class, function ($product, Faker $faker){
 
-
+   $product->images()->create([
+    'image' => $faker->imageUrl()
+   ]);
 
 });
