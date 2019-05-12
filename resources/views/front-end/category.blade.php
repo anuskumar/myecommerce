@@ -10,7 +10,7 @@
 
   <div class="card h-100">
     <a href="{{ route('product.show', $product->slug) }}">
-        <img class="card-img-top" src="http://placehold.it/700x400" alt="">
+        <img class="card-img-top" src="{{ $product->images[0]->image }}" alt="">
     </a>
 
     <div class="card-body">
