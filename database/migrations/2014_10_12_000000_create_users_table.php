@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('phn_number', 16)->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password',96);
-            $table->text('address');
+            $table->text('address')->nullable();
             $table->softDeletes();
             $table->rememberToken();
             $table->timestamps();

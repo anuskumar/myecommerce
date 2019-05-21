@@ -7,6 +7,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Category;
+use Illuminate\Support\Facades\View;
 
 class Controller extends BaseController
 {
@@ -19,9 +20,10 @@ class Controller extends BaseController
         // $categories  = Category::all();
         $categories  = Category::select(['name', 'slug'])->get();
 
-
-        view()->share('categories', $categories);
-        //View::share('categories', $categories);
+       //view()->share('sidebar', true);
+       View::share('sidebar', true);
+       view()->share('categories', $categories);
+       // View::share('categories', $categories);
     }
 }
 

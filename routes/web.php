@@ -21,3 +21,6 @@ Route::get('/cart','CartController@showCart')->name('cart');
 Route::get('/checkout','CartController@showCheckout')->name('checkout');
 
 
+Route::get('/auth/register', 'AuthController@showRegisterForm')->name('auth.register');
+Route::post('/auth/register', 'AuthController@createUser');
+

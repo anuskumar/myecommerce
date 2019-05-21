@@ -17,14 +17,15 @@
 <body>
 
   <!-- Navigation -->
-   @include('inc._navbar');
+   @include('inc._navbar')
 
   <!-- Page Content -->
   <div class="container">
 
     <div class="row">
 
-     @include('inc._sidebar')
+     @includeWhen($sidebar,'inc._sidebar')
+
 
       <div class="col-lg-9">
 
