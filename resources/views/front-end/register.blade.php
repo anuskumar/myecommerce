@@ -8,6 +8,7 @@
 @section('content')
     <br>
     <div class="card mt-4">
+
         <form>
 
             <div class="form-group">
@@ -35,4 +36,5 @@
           </form>
     </div>
 </div>
+
 @stop
