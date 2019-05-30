@@ -13,23 +13,23 @@
 
             <div class="form-group">
               <label for="full_name">Full Name</label>
-              <input type="text" name="full_name" class="form-control" id="full_name" placeholder="Full Name">
+              <input type="text" name="full_name" class="form-control" id="full_name" placeholder="Full Name" required
             </div>
 
 
             <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
-                <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
+                <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" required>
             </div>
 
             <div class="form-group">
               <label for="phn_number">PHN Number</label>
-              <input type="text" name="phn_number" class="form-control" id="phn_number" placeholder="PHN Number">
+              <input type="text" name="phn_number" class="form-control" id="phn_number" placeholder="PHN Number" required>
             </div>
 
             <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Password">
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>
