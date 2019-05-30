@@ -9,8 +9,8 @@
     <br>
     <div class="card mt-4">
 
-        <form>
-
+        <form action="{{ route('auth.register') }} method="POST">
+           @csrf
             <div class="form-group">
               <label for="full_name">Full Name</label>
               <input type="text" name="full_name" class="form-control" id="full_name" placeholder="Full Name" required
@@ -18,7 +18,7 @@
 
 
             <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
+                <label for="email">Email address</label>
                 <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" required>
             </div>
 

@@ -12,4 +12,8 @@ class AuthController extends Controller
         $data['sidebar'] = false ;
         return view('front-end.register', $data);
     }
+
+    public function createUser(){
+
+    }
 }
