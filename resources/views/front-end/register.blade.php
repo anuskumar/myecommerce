@@ -7,10 +7,15 @@
 
 @section('content')
     <br>
+
+
+
     <div class="card mt-4">
 
-        <form action="{{ route('auth.register') }} method="POST">
-           @csrf
+        <form action="{{ route('auth.register') }} method="post">
+
+
+
             <div class="form-group">
               <label for="full_name">Full Name</label>
               <input type="text" name="full_name" class="form-control" id="full_name" placeholder="Full Name" required
@@ -29,12 +34,15 @@
 
             <div class="form-group">
               <label for="password">Password</label>
-              <input type="password" class="form-control" id="password" placeholder="Password">
+              <input type="password" name="password" class="form-control" id="password" placeholder="Password">
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
+
+
     </div>
+
 </div>
 
-@stop
+@endsection

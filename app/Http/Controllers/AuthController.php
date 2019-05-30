@@ -13,7 +13,9 @@ class AuthController extends Controller
         return view('front-end.register', $data);
     }
 
-    public function createUser(){
+    public function createUser(Request $request)
+    {
 
+        return $request->except(['_token']);
     }
 }
