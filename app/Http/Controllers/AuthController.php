@@ -25,10 +25,12 @@ class AuthController extends Controller
 
         $request->validate([
             'full_name' => 'required|min:4|max:33' ,
-            'email' => 'required|email|unique:users, email' ,
+            'email' => 'required|email|unique:users,email' ,
             'phn_number' => 'required|min:11|max:14' ,
             'password' => 'required|min:6'
         ]);
+
+
         $data = $request->except(['_token']);
         $data['password'] = bcrypt($data['password']);
 
@@ -42,6 +44,8 @@ class AuthController extends Controller
         session()->flash('type','danger');
         session()->flash('message',$eee->getMessage());
         }
+
+
         return redirect()->back();
     }
 }
