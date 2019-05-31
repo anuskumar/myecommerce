@@ -11,6 +11,32 @@
 
 
     <div class="card mt-4">
+     <div class="center-content">
+
+
+        @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+        @endif
+
+
+
+        @if (session()->has('message'))
+        <div class="alert alert-{{ session('type') }}">
+            {{ session('message') }}
+        </div>
+        @endif
+
+
+
+
+
+
 
         <form action="{{ route('auth.register') }}" method="post">
         @csrf
@@ -41,6 +67,8 @@
 
 
     </div>
+
+</div>
 
 </div>
 
