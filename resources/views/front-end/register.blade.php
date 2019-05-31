@@ -12,9 +12,8 @@
 
     <div class="card mt-4">
 
-        <form action="{{ route('auth.register') }} method="post">
-
-
+        <form action="{{ route('auth.register') }}" method="post">
+        @csrf
 
             <div class="form-group">
               <label for="full_name">Full Name</label>
