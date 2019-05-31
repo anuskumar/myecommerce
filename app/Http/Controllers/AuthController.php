@@ -16,6 +16,17 @@ class AuthController extends Controller
     public function createUser(Request $request)
     {
 
-        return $request->except(['_token']);
+        // return $request->input('password');
+        // return $request->all();
+        // return $request->except(['password']);
+        // return $request->only(['password']);
+
+        $request->validate([
+            'full_name' => 'required' ,
+            'email' => 'required|email' ,
+            'phn_number' => 'required|min:11' ,
+            'password' => 'required|min:6'
+
+        ]);
     }
 }
