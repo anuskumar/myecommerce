@@ -26,7 +26,7 @@ class AuthController extends Controller
         $request->validate([
             'full_name' => 'required|min:4|max:33' ,
             'email' => 'required|email|unique:users,email' ,
-            'phn_number' => 'required|min:11|max:14' ,
+            'phn_number' => 'required|min:7|max:14' ,
             'password' => 'required|min:6'
         ]);
 

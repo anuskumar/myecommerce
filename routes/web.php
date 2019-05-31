@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -10,6 +11,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes(['verify' => true]);
+
 
 Route::get('/','HomeController@index')->name('home');
 Route::get('/products/{slug}','HomeController@showProduct')->name('product.show');
